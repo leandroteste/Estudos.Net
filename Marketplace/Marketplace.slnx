@@ -1,1 +1,12 @@
-<Solution />
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="Marketplace.Api/Marketplace.Api.csproj" Id="555b93e9-18fd-4600-a7c8-4fa9f8b5f125" />
+    <Project Path="Marketplace.Application/Marketplace.Application.csproj" Id="6088b47b-9e47-41e2-b475-b9c2000c6ef3" />
+    <Project Path="Marketplace.Domain/Marketplace.Domain.csproj" Id="57ef6a2c-b095-443a-92b3-fa6bb3316c8b" />
+    <Project Path="Marketplace.Infrastructure/Marketplace.Infrastructure.csproj" Id="94909ee9-7ff4-4c21-81b6-5b0a85f1114a" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="Marketplace.IntegrationTests/Marketplace.IntegrationTests.csproj" Id="67c47415-848b-487b-8503-856c96650d2e" />
+    <Project Path="Marketplace.UnitTests/Marketplace.UnitTests.csproj" Id="9817601c-d7a9-40a9-b150-5a580f8ccad0" />
+  </Folder>
+</Solution>
