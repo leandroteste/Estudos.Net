@@ -1,6 +1,4 @@
 ﻿using Marketplace.Domain.Exceptions;
-using System;
-using System.Net;
 using System.Text.RegularExpressions;
 
 namespace Marketplace.Domain.ValueObjects
@@ -16,21 +14,14 @@ namespace Marketplace.Domain.ValueObjects
         /// <param name="address"></param>
         public Email(string address)
         {
+            ValidateAddress(address);
             Address = address;
         }
 
         /// <summary>
         /// Gets the email address.
         /// </summary>
-        public string Address
-        {
-            get;
-            private set
-            {
-                ValidateAddress(value); 
-                field = value;
-            }
-        }
+        public string Address { get; private set; }
 
         /// <summary>
         /// Validates the email address format.
@@ -45,7 +36,7 @@ namespace Marketplace.Domain.ValueObjects
 
             if (!valid)
             {
-                throw new InvalidEmailException("Invalid email address.");
+                throw new DomainArgumentException("Invalid email address.");
             }
         }
     }

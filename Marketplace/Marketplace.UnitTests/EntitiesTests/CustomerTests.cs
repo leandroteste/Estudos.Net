@@ -32,7 +32,7 @@ namespace Marketplace.UnitTests.EntitiesTests
             var email = new Email("john.doe@teste.com");
 
             // Act & Assert
-            Assert.Throws<CustomerException>(() => new Customer(id, name, email));
+            Assert.Throws<DomainArgumentException>(() => new Customer(id, name, email));
         }
 
         [Fact]
@@ -44,7 +44,7 @@ namespace Marketplace.UnitTests.EntitiesTests
             var email = new Email("john.doe@teste.com");
 
             // Act & Assert
-            Assert.Throws<CustomerException>(() => new Customer(id, name, email));
+            Assert.Throws<DomainArgumentException>(() => new Customer(id, name, email));
         }
     }
 }
