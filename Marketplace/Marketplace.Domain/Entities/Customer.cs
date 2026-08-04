@@ -18,10 +18,8 @@ namespace Marketplace.Domain.Entities
         public Customer(int id, string name, Email email) : base(id)
         {
             ValidateName(name);
-
-            Id = id;
+            Email = email ?? throw new DomainArgumentException("Email cannot be null.");
             Name = name;
-            Email = email;
         }
 
         /// <summary>
