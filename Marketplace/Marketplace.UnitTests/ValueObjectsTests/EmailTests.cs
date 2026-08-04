@@ -35,5 +35,34 @@ namespace Marketplace.UnitTests.ValueObjectsTests
         {
             Assert.Throws<DomainArgumentException>(() => new Email("com.user@teste"));
         }
+
+        [Fact]
+        public void TwoEmails_WithSameAddress_ShouldBeEqual()
+        {
+            var email = new Email("teste@teste.com");
+            var email2 = new Email("teste@teste.com");
+            Assert.Equal(email, email2);
+        }
+
+        [Fact]
+        public void TwoEmails_WithDifferentAddresses_ShouldNotBeEqual()
+        {
+            var email1 = new Email("primeiro@teste.com");
+            var email2 = new Email("segundo@teste.com");
+
+            Assert.NotEqual(email1, email2);
+        }
+
+        [Fact]
+        public void HashSet_ShouldNotAddDuplicateEmail()
+        {
+            var emails = new HashSet<Email>
+            {
+                new("teste@teste.com"),
+                new("teste@teste.com")
+            };
+
+            Assert.Single(emails);
+        }
     }
 }
