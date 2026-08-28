@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="FXPlatform.Api/FXPlatform.Api.csproj" />
+    <Project Path="FXPlatform.Application/FXPlatform.Application.csproj" />
+    <Project Path="FXPlatform.Domain/FXPlatform.Domain.csproj" />
+    <Project Path="FXPlatform.Infrastructure/FXPlatform.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="FXPlatform.IntegrationTests/FXPlatform.IntegrationTests.csproj" />
+    <Project Path="FXPlatform.UnitTests/FXPlatform.UnitTests.csproj" />
+  </Folder>
+</Solution>
